@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #FFF;
+    opacity: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+::-ms-input-placeholder {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #1A67B8, #2572D9, #51E1FF, #E9E6FF);
+    background-size: 600% 200%;
+    animation: bggradient 10s linear infinite;
+    animation-direction: alternate;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes bggradient {
+    0% {
+        background-position: 0%
+    }
+    100% {
+        background-position: 100%
+    }
+}
+
+.bgline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: url('IMG_3011.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+.header-logo {
+    width: 100%;
+    height: 40px;
+    float: left;
+    margin: 30px 0 40px 0;
+}
+
+.login {
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.login-wrap {
+    background: rgba(0, 0, 58, 0.8);
+    width: calc(100% - 140px);
+    padding: calc(50vh - 259px) 70px;
+    overflow: auto;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+#signinbox {
+    display: block;
+    float: left;
+    margin-bottom: 114px;
+}
+
+@media (max-height: 518px) {
+    #signinbox {
+        margin-bottom: calc((100vh - 404px));
+    }
+}
+
+#signupbox {
+    display: none;
+    float: left;
+}
+
+.inputfield {
+    height: 20px;
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0);
+    border: white solid 1px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inputsubmit {
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.inputsubmit:active {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.submitfunc:after {
+    background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 20px);
+    -webkit-animation: AnimationProgress 5s linear infinite;
+    animation: AnimationProgress 5s linear infinite;
+    background-size: 300% 300%;
+    height: 40px;
+    width: 100%;
+    border: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    transition: all 1s ease-in-out;
+}
+
+@-webkit-keyframes AnimationProgress {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 94% 0%;
+    }
+}
+
+@keyframes AnimationProgress {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 94% 0%;
+    }
+}
+
+.spf {
+    width: 100%;
+    line-height: 20px;
+    margin-top: 30px;
+    color: #fff;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.spf a {
+    width: 100%;
+    float: right;
+}
